@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <body>
+        <ui:composition template="./layout.xhtml">
+            <ui:define name="content">
+                <h:form id="girisForm">
+                    <p:panel header="Giris">
+                        <h:panelGrid id="girisPG" columns="3"  cellpadding="5">
+                            <p:outputLabel for="kullanici" value="Kullanici Adi:"/>
+                            <p:inputText id="kullanici" required="true" requiredMessage="Kullanici Adi Bos Gecilemez"/>
+                            <p:message for="kullanici"/>
+                            
+                            <p:outputLabel for="sifre" value="Sifre:"/>
+                            <p:password id="sifre" required="true" requiredMessage="Sifre Bos Gecilemez"/>
+                            <p:message for="sifre"/>
+                        </h:panelGrid>   
+                        
+                        <p:commandButton value="Giris" actionListener="#" update="girisPG" >
+                            
+                            
+                        </p:commandButton>    
+
+
+                    </p:panel>
+
+
+
+
+                </h:form>
+
+
+
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
